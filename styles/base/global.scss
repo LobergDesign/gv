@@ -1,0 +1,14 @@
+@import "@/styles/config/_colors.scss";
+
+@font-face {
+  font-family: "hnb";
+  src: url("/app/fonts/hnb.woff2") format("woff2");
+}
+
+body {
+  font-family: "hn", sans-serif;
+  color: $color-dark;
+}
+h1 {
+  font-family: "hnb", sans-serif;
+}

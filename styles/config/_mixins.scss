@@ -1,0 +1,31 @@
+@mixin vp-lg {
+  // min-width: 1025
+  @media only screen and (min-width: $vp-large) {
+    @content;
+  }
+}
+
+@mixin vp-xl {
+  // min-width: 1280
+  @media only screen and (min-width: $vp-extra-large) {
+    @content;
+  }
+}
+
+// custom viewport - max
+@mixin vp-custom-max($viewport-size) {
+  @media only screen and (max-width: $viewport-size) {
+    @content;
+  }
+}
+@mixin vp-custom-max-w-max-h($viewport-size-w, $viewport-size-h) {
+  @media (max-width: $viewport-size-w) and (max-height: $viewport-size-h) {
+    @content;
+  }
+}
+// custom viewport - min
+@mixin vp-custom-min($viewport-size) {
+  @media only screen and (min-width: $viewport-size) {
+    @content;
+  }
+}

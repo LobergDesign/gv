@@ -1,0 +1,22 @@
+// viewport
+$vp-small: 640px;
+$vp-medium: 768px;
+$vp-large: 1025px;
+$vp-extra-large: 1280px;
+
+// content width
+$wrap-max-width: 151.2rem;
+$wrap-width: 90vw;
+$wrap-content-max-width: 180rem;
+
+// display grid settings
+$gap: clamp(1rem, 2vw, 2rem);
+$col: 12;
+
+$cubic-bezier: cubic-bezier(0.65, 0, 0.35, 1);
+$cubic-bezier-bounce: cubic-bezier(0.47, 1.64, 0.41, 0.8);
+
+$transition: 0.25s $cubic-bezier;
+$transition--fast: 0.18s $cubic-bezier;
+$transition--slow: 0.4s $cubic-bezier;
+$transition-bounce: 0.3s $cubic-bezier-bounce;

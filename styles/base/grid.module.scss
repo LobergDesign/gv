@@ -1,0 +1,62 @@
+@import "~/styles/config/_layout.scss";
+// GRID "FRAMWORK" STARTS HERE:
+.wrap {
+  width: $wrap-width;
+  max-width: $wrap-max-width;
+  margin: 0 auto;
+}
+
+// row
+.row {
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+  grid-gap: $gap;
+  padding-bottom: $gap;
+  > * {
+    grid-column-end: span $col;
+  }
+}
+
+// columns
+.col {
+  grid-column-end: span $col;
+}
+
+@for $i from 1 through $col {
+  .col#{$i} {
+    grid-column-end: span $i;
+  }
+}
+
+// responsive
+@each $size, $abbr in ($vp-small, sm), ($vp-medium, md), ($vp-large, lg),
+  ($vp-extra-large, xl)
+{
+  @media (min-width: $size) {
+    @for $i from 1 through $col {
+      .col#{$abbr}#{$i} {
+        grid-column-end: span $i;
+      }
+    }
+  }
+}
+
+// "start"
+@for $i from 1 through $col {
+  .colStart#{$i} {
+    grid-column-start: $i;
+  }
+}
+
+// responsive start
+@each $size, $abbr in ($vp-small, sm), ($vp-medium, md), ($vp-large, lg),
+  ($vp-extra-large, xl)
+{
+  @media (min-width: $size) {
+    @for $i from 1 through $col {
+      .colStart#{$abbr}-#{$i} {
+        grid-column-start: $i;
+      }
+    }
+  }
+}
