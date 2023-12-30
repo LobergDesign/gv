@@ -1,0 +1,25 @@
+@import "@/styles/config/_colors.scss";
+.aside {
+  border-radius: clamp(20px, 10vw, 50px);
+  overflow: hidden;
+  height: 88vh;
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+  &__contactBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 300px;
+    background-color: $color-brand-light;
+    border-bottom-right-radius: clamp(12px, 7vw, 40px);
+    z-index: 2;
+  }
+}
