@@ -6,9 +6,9 @@ export default function Page() {
   return (
     <div>
       <div>{state.a.b.c}</div>
-      <div>
-        <button onClick={(e) => setState({})}>Break this</button>
-      </div>
+      {/* <div>
+        <button onClick={(e) => setState()}>Break this</button>
+      </div> */}
     </div>
   );
 }
