@@ -1,10 +1,12 @@
-// components
-import { AtomImage } from "@/app/ui/atoms/image/image";
+// svg
+import Logo from "@/public/logo.svg";
+// styles
+import style from "./header.module.scss";
 
 export default async function Header() {
   return (
-    <header>
-      <AtomImage src="/logo.svg" alt="logo" width={90} height={60} />
+    <header className={style.header}>
+      <Logo />
     </header>
   );
 }

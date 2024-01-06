@@ -7,6 +7,7 @@ export const AtomImage = ({
 }: Global.IImage) => {
   return (
     <Image
+      className="atom-image"
       src={src} // Path to the image
       alt={alt ? alt : ""} // Alternative text
       width={width} // Width of the image (can be in pixels or a number)
