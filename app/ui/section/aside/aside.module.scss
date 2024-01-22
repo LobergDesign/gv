@@ -4,7 +4,7 @@
   overflow: hidden;
   height: 88vh;
   position: relative;
-  img {
+  &__bgImage {
     position: absolute;
     top: 0;
     right: 0;
@@ -18,8 +18,16 @@
     left: 0;
     height: 300px;
     width: 300px;
+    padding: clamp(10px, 5vw, 20px);
     background-color: $color-brand-light;
     border-bottom-right-radius: clamp(12px, 7vw, 40px);
     z-index: 2;
+  }
+  &__icon{
+    display: inline-block;
+    img{
+      height: 20px;
+      width: 20px
+    }
   }
 }
