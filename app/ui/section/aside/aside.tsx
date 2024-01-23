@@ -6,6 +6,7 @@ import { RTE } from "@/app/ui/atoms/rte/rte";
 import style from "./aside.module.scss";
 
 export default async function Aside({ data }: CMS.IAside) {
+  console.log("datassssss", data.bannerImage[0].secure_url);
   return (
     <aside className={style.aside}>
       <div className={style.aside__contactBox}>
@@ -48,7 +49,14 @@ export default async function Aside({ data }: CMS.IAside) {
         )}
       </div>
       <div className={style.aside__bgImage}>
-        <AtomImage src="/gv.png" alt="" width={1200} height={1000} />
+        {data.bannerImage[0].secure_url && (
+          <AtomImage
+            src={data.bannerImage[0].secure_url}
+            alt=""
+            width={1200}
+            height={1000}
+          />
+        )}
       </div>
     </aside>
   );

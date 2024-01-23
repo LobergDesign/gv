@@ -10,12 +10,14 @@ declare namespace CMS {
     profiletext: [Object];
     adresse: [Object];
     seoSettings: [Object];
+    bannerImage: any[];
   }
   export interface IAsideObj {
     phonenumber: string;
     email: string;
     profiletext: object;
     adresse: object;
+    bannerImage: any[];
   }
   export interface IAside {
     data: CMS.IAsideObj;

@@ -29,13 +29,14 @@ export default async function RootLayout({
   const data = await getData();
 
   const fields = data[0].fields as unknown as CMS.IFields;
-  const { phonenumber, email, profiletext, adresse, bodytext, title } = fields;
+  const { phonenumber, email, profiletext, adresse, bannerImage } = fields;
 
   const asideObj: CMS.IAsideObj = {
     phonenumber,
     email,
     profiletext,
     adresse,
+    bannerImage,
   };
 
   return (
