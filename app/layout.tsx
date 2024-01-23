@@ -56,9 +56,9 @@ export default async function RootLayout({
               <Aside data={asideObj!} />
             </div>
           </div>
-          <div className={styleGrid.col12}>
+          {/* <div className={styleGrid.col12}>
             <Footer />
-          </div>
+          </div> */}
         </div>
       </body>
     </html>
