@@ -20,3 +20,7 @@ $transition: 0.25s $cubic-bezier;
 $transition--fast: 0.18s $cubic-bezier;
 $transition--slow: 0.4s $cubic-bezier;
 $transition-bounce: 0.3s $cubic-bezier-bounce;
+
+// borders
+$border-medium: clamp(15px, 10vw, 32px);
+$border-large: clamp(20px, 15vw, 50px);

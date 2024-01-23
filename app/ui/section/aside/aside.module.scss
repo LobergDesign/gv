@@ -1,33 +1,94 @@
 @import "@/styles/config/_colors.scss";
+@import "@/styles/config/_layout.scss";
+@import "@/styles/config/_mixins.scss";
 .aside {
-  border-radius: clamp(20px, 10vw, 50px);
+  border-bottom-left-radius: $border-large;
+  border-top-right-radius: $border-large;
   overflow: hidden;
   height: 88vh;
   position: relative;
+  // main bg
   &__bgImage {
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
     width: 100%;
+    max-height: 100%;
     z-index: 1;
+    img {
+      max-height: 100%;
+    }
   }
+
+  // contact box
   &__contactBox {
     position: absolute;
     top: 0;
     left: 0;
-    height: 300px;
-    width: 300px;
-    padding: clamp(10px, 5vw, 20px);
+    padding: clamp(14px, 15vw, 20px) clamp(25px, 15vw, 35px)
+      clamp(10px, 8vw, 15px) clamp(14px, 15vw, 25px);
     background-color: $color-brand-light;
-    border-bottom-right-radius: clamp(12px, 7vw, 40px);
+    border-bottom-right-radius: $border-medium;
     z-index: 2;
   }
-  &__icon{
+
+  &__item {
+    display: block;
+    margin-bottom: clamp(10px, 12vw, 12px);
+  }
+  // icons in contact box
+  &__icon {
     display: inline-block;
-    img{
-      height: 20px;
-      width: 20px
+    vertical-align: text-bottom;
+    margin-bottom: -3px;
+    margin-right: clamp(10px, 10vw, 15px);
+    img {
+      object-fit: none;
+      height: clamp(16px, 8vw, 18px);
+      width: clamp(16px, 8vw, 18px);
+    }
+  }
+  &__iconEmail {
+    margin-bottom: -5px;
+  }
+
+  // profile box
+  &__profileBox {
+    .aside__icon {
+      vertical-align: top;
+    }
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: clamp(14px, 15vw, 20px) clamp(25px, 15vw, 35px)
+      clamp(5px, 6vw, 10px) clamp(14px, 15vw, 25px);
+    background-color: $color-brand-light;
+    border-top-left-radius: $border-medium;
+    z-index: 2;
+    p {
+      display: inline-block;
+      width: 200px;
+    }
+  }
+}
+
+// devices
+@include vp-small-devices {
+  .aside {
+    height: auto;
+    // main bg
+    &__bgImage {
+      display: none;
+    }
+
+    // contact box
+    &__contactBox,
+    &__profileBox {
+      position: relative;
+
+      padding: 10px;
+      border-radius: 0;
     }
   }
 }

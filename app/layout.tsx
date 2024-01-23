@@ -10,10 +10,9 @@ import Aside from "@/app/ui/section/aside/aside";
 import contentfulClient from "@/app/lib/client";
 export const metadata: Metadata = {
   title: "Glad vinduer",
-  description: "gladvinduer københavns lokale vinduespudser",
+  description: "glad vinduer københavns lokale vinduespudser",
 };
 
-// Retrieve the list of blog posts from Contentful
 const getData = async () => {
   const response = await contentfulClient().getEntries({
     content_type: "pageGladVinduer",
@@ -30,7 +29,7 @@ export default async function RootLayout({
   const data = await getData();
 
   const fields = data[0].fields as unknown as CMS.IFields;
-  const { phonenumber, email, profiletext, adresse } = fields;
+  const { phonenumber, email, profiletext, adresse, bodytext, title } = fields;
 
   const asideObj: CMS.IAsideObj = {
     phonenumber,

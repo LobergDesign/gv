@@ -5,4 +5,8 @@ declare namespace Global {
     width: number;
     height: number;
   }
+
+  export interface IRawHtmlComponentProps {
+    htmlContent: any;
+  }
 }

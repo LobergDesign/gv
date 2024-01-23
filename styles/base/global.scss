@@ -1,26 +1,16 @@
 @import "@/styles/config/_colors.scss";
+@import "@/styles/config/_mixins.scss";
 
-@font-face {
-  font-family: "hnb";
-  src: url("/fonts/hnb.woff2") format("woff2");
+html {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
 }
-@font-face {
-  font-family: "hn";
-  src: url("/fonts/hn.woff2") format("woff2");
-}
-
 body {
-  font-family: "hn", sans-serif;
+  @include font-regular;
   color: $color-brand;
   margin: clamp(10px, 8vw, 20px);
-}
-h1 {
-  font-family: "hnb", sans-serif;
-}
-h2 {
-  font-family: "hnb", sans-serif;
-}
-img {
-  object-fit: cover;
-  max-width: 100%;
+  font-size: clamp(14px, 10vw, 15px);
 }

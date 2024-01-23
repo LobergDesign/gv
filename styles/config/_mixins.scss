@@ -1,3 +1,13 @@
+@mixin font-bold {
+  font-family: "hnb", sans-serif;
+}
+@mixin font-medium {
+  font-family: "hnm", sans-serif;
+}
+@mixin font-regular {
+  font-family: "hn", sans-serif;
+}
+
 @mixin vp-lg {
   // min-width: 1025
   @media only screen and (min-width: $vp-large) {
@@ -8,6 +18,13 @@
 @mixin vp-xl {
   // min-width: 1280
   @media only screen and (min-width: $vp-extra-large) {
+    @content;
+  }
+}
+
+@mixin vp-small-devices {
+  // max-width: 1280
+  @media only screen and (max-width: $vp-small) {
     @content;
   }
 }

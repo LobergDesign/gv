@@ -20,4 +20,11 @@ declare namespace CMS {
   export interface IAside {
     data: CMS.IAsideObj;
   }
+  export interface IPageObj {
+    bodytext: any;
+    title: any;
+  }
+  export interface IPage {
+    data: CMS.IPageObj;
+  }
 }
