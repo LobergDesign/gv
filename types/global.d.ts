@@ -4,7 +4,7 @@ declare namespace Global {
     alt: string;
     width: number;
     height: number;
-    layout: string;
+    layout?: string;
   }
 
   export interface IRawHtmlComponentProps {
