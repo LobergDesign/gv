@@ -6,7 +6,6 @@ import { RTE } from "@/app/ui/atoms/rte/rte";
 import style from "./aside.module.scss";
 
 export default async function Aside({ data }: CMS.IAside) {
-  console.log("datassssss", data.bannerImage[0].secure_url);
   return (
     <aside className={style.aside}>
       <div className={style.aside__contactBox}>

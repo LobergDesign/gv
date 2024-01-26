@@ -1,0 +1,19 @@
+@import "@/styles/config/_colors.scss";
+@import "@/styles/config/_layout.scss";
+@import "@/styles/config/_mixins.scss";
+.main {
+  margin-top: 8%;
+  max-width: 800px;
+  p {
+    max-width: 700px;
+  }
+  &__bodytext {
+    h2 {
+      margin-top: clamp(15px, 12vw, 40px);
+    }
+  }
+}
+
+// devices
+@include vp-small-devices {
+}

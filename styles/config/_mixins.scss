@@ -7,6 +7,9 @@
 @mixin font-regular {
   font-family: "hn", sans-serif;
 }
+@mixin font-thin {
+  font-family: "hnt", sans-serif;
+}
 
 @mixin vp-lg {
   // min-width: 1025

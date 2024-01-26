@@ -1,0 +1,35 @@
+@import "@/styles/config/_colors.scss";
+@import "@/styles/config/_layout.scss";
+.footer {
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-items: left;
+    img {
+      margin-right: clamp(10px, 4vw, 15px);
+    }
+  }
+  &__social {
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    display: flex;
+  }
+  &__socialIcon {
+    height: clamp(28px, 15vw, 30px);
+    width: clamp(28px, 15vw, 30px);
+    border: 1px solid $color-brand;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: clamp(10px, 4vw, 15px);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    transition: transform $transition--fast;
+    will-change: transform;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

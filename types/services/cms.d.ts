@@ -1,4 +1,15 @@
 declare namespace CMS {
+  export interface IMeta {
+    fields: {
+      title: string;
+      metaTitle: string;
+      metaDescription: string;
+
+      openGraphTitle: string;
+      openGraphType: string;
+      openGraphimage: any;
+    };
+  }
   export interface IFields {
     pageTitle: string;
     title: [Object];
@@ -9,7 +20,7 @@ declare namespace CMS {
     facebook: string;
     profiletext: [Object];
     adresse: [Object];
-    seoSettings: [Object];
+    seoSettings: IMeta;
     bannerImage: any[];
   }
   export interface IAsideObj {
@@ -28,5 +39,9 @@ declare namespace CMS {
   }
   export interface IPage {
     data: CMS.IPageObj;
+  }
+  export interface IFooter {
+    linkedIn: string;
+    facebook: string;
   }
 }
