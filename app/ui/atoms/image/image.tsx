@@ -5,6 +5,7 @@ export const AtomImage = ({
   layout = "fixed",
   width = 500,
   height = 250,
+  loading = "eager",
 }: Global.IImage) => {
   return (
     <Image
@@ -14,6 +15,7 @@ export const AtomImage = ({
       width={width} // Width of the image (can be in pixels or a number)
       height={height} // Height of the image
       layout={layout}
+      loading={loading}
     />
   );
 };

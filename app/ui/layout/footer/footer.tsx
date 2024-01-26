@@ -16,6 +16,7 @@ export default async function Footer({ linkedIn, facebook }: CMS.IFooter) {
             width={32}
             height={35}
             layout="intrinsic"
+            loading="lazy"
           />
           <AtomImage
             src="/mp.png"
@@ -23,6 +24,7 @@ export default async function Footer({ linkedIn, facebook }: CMS.IFooter) {
             width={60}
             height={35}
             layout="intrinsic"
+            loading="lazy"
           />
         </div>
         <div className={`${styleGrid.col6} ${style.footer__social}`}>
@@ -40,6 +42,7 @@ export default async function Footer({ linkedIn, facebook }: CMS.IFooter) {
                     width={10}
                     height={10}
                     layout="intrinsic"
+                    loading="lazy"
                   />
                 </a>
               </div>
@@ -57,6 +60,7 @@ export default async function Footer({ linkedIn, facebook }: CMS.IFooter) {
                     width={4}
                     height={10}
                     layout="intrinsic"
+                    loading="lazy"
                   />
                 </a>
               </div>

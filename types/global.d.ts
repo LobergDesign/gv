@@ -5,6 +5,7 @@ declare namespace Global {
     width: number;
     height: number;
     layout?: string;
+    loading?: "lazy" | "eager";
   }
 
   export interface IRawHtmlComponentProps {
